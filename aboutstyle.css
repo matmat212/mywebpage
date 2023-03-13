@@ -1,0 +1,151 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Press+Start+2P&family=Rubik+Iso&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik+Iso&display=swap');
+</style>
+
+:root{
+  --primary-bg-color: #34495E;
+  --second-bg-color: #839192;
+  --txt-white:#FFFFFF;
+  --primary-color:#AED6F1 ;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  overflow: visible;
+}
+a{
+  color:var(--txt-white);
+}
+header{
+  color: #FFFFFF;
+  background:#1B2631;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  width: 100%;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background:  #566573 ;
+  height: 80px;
+}
+nav ul{
+display: flex;
+list-style: none;
+}
+nav ul li {
+  padding: 1.5rem 0.5rem;
+  margin: 0 1.4rem;
+  position: relative;
+}
+nav ul li a::after {
+content: '';
+position: absolute;
+height: 3px;
+background-color:#DC7633 ;
+width: 0%;
+left: 0;
+top: 60px;
+transition:all 0.3s;
+}
+nav ul li a:hover:after{
+  width: 100%;
+}
+.social-icons a {
+  font-size: 2 rem;
+  padding: 0 1rem;
+  transition: all 0.1s;
+
+}
+.social-icons a:hover{
+  color:#DC7633 ;
+  ;
+}
+.logo{
+  color: #DC7633    ;
+  font-size: 1rem;
+}
+.logo span{
+  font-size: 4rem;
+  font-weight: 1000;
+  color: #FEF9E7 
+ ;
+}
+ /*-------end nav--------*/
+
+ #about{
+  padding: 80px 0;
+  color: #ababab;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1{
+  flex-basis: 35%;
+}
+.about-col-1 img{
+  width: 100%;
+  border-radius: 30px;
+  margin-left: 5%;
+  border-style: solid #DC7633 ;
+}
+.about-col-2{
+  flex-basis: 60%;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-titles p{
+  font: bold;
+  color: #fff;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background:#DC7633;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+width: 50%;
+}
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span{
+  color: #DC7633;
+  font-size: 1.2rem;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}

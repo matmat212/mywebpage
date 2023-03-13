@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE =edge"/>
+	<meta name="viewport" content="width-devide-width, initial-scale = 1.0"/>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Press+Start+2P&family=Rubik+Iso&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+	<link rel="stylesheet" href="aboutstyle.css">
+	<title>About page</title>
+</head>
+<body>
+<header>
+<nav>
+		<a href="#" class="logo">
+			<h2><span>P</span>ORTFOLIO</h2>
+		</a>
+		<ul>
+			<li style="color: white;"><a href="index2.html">Home</a></li>
+				<li style="color: white;"><a href="about.html">About</a></li>
+					<li style="color: white;"><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="social-icons">
+			<a href="https://www.facebook.com/pinedamatt212"><i class="fa-brands fa-facebook-f"></i></a>
+			<a href="#"><i class="fa-brands fa-twitter"></i></a>
+			<a href="#"><i class="fa-brands fa-instagram"></i></a>
+		</div>
+</nav>
+
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="about-col-1">
+						<img src="about1.jpg">
+					</div>
+					<div class="about-col-2">
+						<h1 class="sub-title">About Me</h1>
+						<p>Hi! ako si mat 20 years old nagpuyo sa dakbayan sa butuan</p>
+						<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+						<p class="tab-links" onclick="opentab('Education')">Education</p>
+						</div>
+						<div class="tab-contents active-tab" id="Skills">
+							<ul>
+								
+								<li><span>Photoshop</span><br>Virtual Graphic Designing</li>
+								<li><span>COMPUTER LITERATE</span><br>Office apps Expert</li>
+								<li><span>Boxing Skills</span><br>Boxing Trainor</li>
+							</ul>
+						</div>
+						<div class="tab-contents" id="Hobbies">
+							<ul>
+								
+								<li><span>Movies/Series</span><br>Peaky Blinders, Avengers and any Marvel Movies</li>
+								<li><span>Anime</span><br>One Piece! Vinland Saga, etc.</li>
+								<li><span>Workout</span><br>Boxing, Skate</li>
+							</ul>
+						</div>
+						<div class="tab-contents" id="Education">
+							<ul>
+								
+								<li><span>Elementary</span><br>(2009-2015) Butuan Central Elem. School</li>
+								<li><span>Secondary</span><br>(2015-2019)Agusan National High School</li>
+								<li><span>Senior High School</span><br>(2019-2021)Agusan National High School</li>
+								<li><span>College</span><br>(Current)Saint-Joseph Institute Technology</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</header>
+<script>
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+</script>
+</body>
+</html>

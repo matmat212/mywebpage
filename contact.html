@@ -1,0 +1,76 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE =edge"/>
+	<meta name="viewport" content="width-devide-width, initial-scale = 1.0"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+		<title>Contact page</title>
+	</head>
+	<body>
+	<header>
+<nav>
+		<a href="#" class="logo">
+			<h2><span>P</span>ORTFOLIO</h2>
+		</a>
+		<ul>
+			<li style="color: white;"><a href="index2.html">Home</a></li>
+				<li style="color: white;"><a href="about.html">About</a></li>
+					<li style="color: white;"><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="social-icons">
+			<a href="https://www.facebook.com/pinedamatt212"><i class="fa-brands fa-facebook-square"></i></a>
+			<a href="https://twitter.com/Mattpineda21"><i class="fa-brands fa-twitter"></i></a>
+			<a href="https://www.instagram.com/mat_matino/"><i class="fa-brands fa-instagram"></i></a>
+		</div>
+</nav>
+
+<!----Contact------>
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+			<h1 class="sub-title"><b>Contact</b> Me!</h1>
+			<p><i class="fas fa-paper-plane"></i>mattpinesa@gmail.com</p>
+			<p><i class="fas fa-phone-square-alt"></i>#09206209336(SMART)</p>
+			<div class="sc">
+				<a href="https://www.facebook.com/pinedamatt212"><i class="fa-brands fa-facebook-square"></i></a>
+			<a href="https://twitter.com/Mattpineda21"><i class="fa-brands fa-twitter"></i></a>
+			<a href="https://www.instagram.com/mat_matino/"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+			</div>
+			<div class="contact-right">
+				<form name="submit-to-google-sheet">
+					<input type="text" name="Name" placeholder="Your name" required>
+					<input type="email" name="Email" placeholder="Your Email" required>
+					<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+					<button type="submit" >Send!</button>
+				</form>
+				<span id="msg"></span>
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwzpmswZqRip0PebO-tnTVAStuYZlaOdLZW-ggMRfW5N3I1zpsoZdGhmcyOXjoSLMoW/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML = "Message sent succesfully!"
+  		setTimeout(function(){
+  			msg.innerHTML = ""
+  		},5000)
+  		form.reset()
+  		
+  	})
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+	</body>
+	</html>

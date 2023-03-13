@@ -1,0 +1,240 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Press+Start+2P&family=Rubik+Iso&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik+Iso&display=swap');
+</style>
+
+:root{
+  --primary-bg-color: #34495E;
+  --second-bg-color: #839192;
+  --txt-white:#FFFFFF;
+  --primary-color:#AED6F1 ;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  overflow: visible;
+}
+a{
+  color:var(--txt-white);
+}
+header{
+  color: #FFFFFF;
+  background:#1B2631;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  width: 100%;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background:  #566573 ;
+  height: 80px;
+}
+nav ul{
+display: flex;
+list-style: none;
+}
+nav ul li {
+  padding: 1.5rem 0.5rem;
+  margin: 0 1.4rem;
+  position: relative;
+}
+nav ul li a::after {
+content: '';
+position: absolute;
+height: 3px;
+background-color:#DC7633 ;
+width: 0%;
+left: 0;
+top: 60px;
+transition:all 0.3s;
+
+}
+nav ul li a:hover:after{
+  width: 100%;
+}
+.social-icons a {
+  font-size: 2 rem;
+  padding: 0 1rem;
+  transition: all 0.1s;
+}
+.social-icons a:hover{
+  color:#DC7633 ;
+  ;
+}
+.logo{
+  color: #DC7633    ;
+  font-size: 1rem;
+}
+.logo span{
+  font-size: 4rem;
+  font-weight: 1000;
+  color: #FEF9E7 
+ ;
+}
+
+/* Navbar close*/
+
+
+/* Showcase start*/
+
+.content-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 84vh;
+  padding: 0 10%;
+}
+.content-left{
+  width: 70%;
+}
+.content-left .lead{
+  font-size: 4rem;
+  font-weight: 1000;
+
+}
+
+.txt-content{
+  display: flex;
+  width: 100%;
+
+}
+.normal_txt{
+  font-size: 3.5rem;
+  width: 15 %;
+}
+.change_txt{
+  font-size: 3.5rem;
+  font-weight: 600;
+  color:#DC7633 ;
+  position: relative;
+}
+.txt-content .change_txt::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ border-left: 2px solid #fff;
+  background: #1B2631 ;
+  animation: animateTxt 5s steps(25) infinite;
+}
+.p1{
+font-family: 'Press Start 2P', cursive;
+font-size: 1.3rem;
+}
+.content-right{
+   transform: translateX(300%);
+ animation: imgAnimate 5s forwards;
+
+}
+.content-right img{
+display: block;
+height: 50%;
+width: 100%;
+
+}
+@keyframes imgAnimate{
+to{
+  transform: translateX(0);
+}
+}
+@keyframes animateTxt{
+  3%{
+    left: 0;
+  }
+  30%{
+    left: 100%;
+  }
+  80%{
+    left: 100%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+/* Showcase Close*/
+/*contact*/
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  color: #DC7633;
+  margin-right: 8px;
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+margin-left: 5px}
+
+.sub-title b{
+  color:#DC7633 ;
+  font-weight: 800;
+}
+
+.sc a{
+text-decoration: none;
+font-size: 2rem;
+margin-top: 5px;
+margin-right: 20px;
+margin-left: 5px;
+color: #ababab;
+display: inline-block;
+transition: transform 0.5s;
+}
+.sc a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.contact-right form{
+  width: 50%;
+  margin-left: 45%;
+  margin-right: 25%;
+
+}
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  margin-top: -15px;
+}
+.submit{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#msg{
+  color: #61b572;
+  margin-top: -10px;
+  margin-left: 50rem;
+  display: block;
+  position: center;
+}
